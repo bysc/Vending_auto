@@ -1,0 +1,35 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Nov 22 01:52:03 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "seg_disp<0>" LOCATE = SITE "C7" LEVEL 1;
+COMP "clk50m" LOCATE = SITE "T8" LEVEL 1;
+COMP "seg_disp<1>" LOCATE = SITE "E6" LEVEL 1;
+COMP "seg_disp<2>" LOCATE = SITE "C5" LEVEL 1;
+COMP "seg_disp<3>" LOCATE = SITE "F7" LEVEL 1;
+COMP "seg_disp<4>" LOCATE = SITE "D6" LEVEL 1;
+COMP "seg_disp<5>" LOCATE = SITE "E7" LEVEL 1;
+COMP "seg_disp<6>" LOCATE = SITE "D5" LEVEL 1;
+COMP "clr" LOCATE = SITE "L3" LEVEL 1;
+COMP "seg_disp<7>" LOCATE = SITE "C6" LEVEL 1;
+COMP "key_in<0>" LOCATE = SITE "C3" LEVEL 1;
+COMP "key_in<1>" LOCATE = SITE "D3" LEVEL 1;
+COMP "key_in<2>" LOCATE = SITE "E4" LEVEL 1;
+COMP "key_in<3>" LOCATE = SITE "E3" LEVEL 1;
+COMP "seg_sel<0>" LOCATE = SITE "E8" LEVEL 1;
+COMP "seg_sel<1>" LOCATE = SITE "F9" LEVEL 1;
+COMP "seg_sel<2>" LOCATE = SITE "F10" LEVEL 1;
+COMP "seg_sel<3>" LOCATE = SITE "E10" LEVEL 1;
+COMP "seg_sel<4>" LOCATE = SITE "D9" LEVEL 1;
+COMP "seg_sel<5>" LOCATE = SITE "D8" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "U_CLK/count_0" BEL "U_CLK/count_1" BEL
+        "U_CLK/count_2" BEL "U_CLK/count_3" BEL "U_CLK/count_4" BEL
+        "U_CLK/count_5" BEL "U_CLK/count_6" BEL "U_CLK/count_7" BEL
+        "U_CLK/count_8" BEL "U_CLK/count_9" BEL "U_CLK/count_10" BEL
+        "U_CLK/count_11" BEL "U_CLK/count_12" BEL "U_CLK/count_13" BEL
+        "U_CLK/count_14" BEL "U_CLK/count_15" BEL "U_CLK/clk1k" BEL
+        "clk50m_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,27 @@
+NET clk50m LOC = T8 | TNM_NET = sys_clk_pin;							  # ±÷”
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50000 kHz;
+
+##
+NET clr            LOC = L3 | IOSTANDARD = "LVCMOS33"; 		  ##∏¥Œª–≈∫≈
+
+########LED Pin define#####################
+NET key_in<0>                LOC = C3 | IOSTANDARD = "LVCMOS33";       ## KEY1
+NET key_in<1>                LOC = D3 | IOSTANDARD = "LVCMOS33";       ## KEY2
+NET key_in<2>                LOC = E4 | IOSTANDARD = "LVCMOS33";       ## KEY3
+NET key_in<3>                LOC = E3 | IOSTANDARD = "LVCMOS33";       ## KEY4
+
+########smg interface Pin define#####################
+NET seg_disp<0> LOC = C7 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_disp<1> LOC = E6 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_disp<2> LOC = C5 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_disp<3> LOC = F7 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_disp<4> LOC = D6 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_disp<5> LOC = E7 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_disp<6> LOC = D5 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_disp<7> LOC = C6 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_sel<4> LOC = D9 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_sel<3> LOC = E10 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_sel<2> LOC = F10 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_sel<1> LOC = F9 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_sel<0> LOC = E8 | IOSTANDARD = "LVCMOS33"; ##
+NET seg_sel<5> LOC = D8 | IOSTANDARD = "LVCMOS33"; ##

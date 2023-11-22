@@ -1,0 +1,539 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\software\ISE\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s
+2 -n 3 -fastpaths -xml Vending.twx Vending.ncd -o Vending.twr Vending.pcf -ucf
+Vending.ucf
+
+Design file:              Vending.ncd
+Physical constraint file: Vending.pcf
+Device,package,speed:     xc6slx9,ftg256,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 409 paths analyzed, 102 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.464ns.
+--------------------------------------------------------------------------------
+
+Paths for end point U_CLK/count_11 (SLICE_X13Y31.D2), 6 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     16.536ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_CLK/count_5 (FF)
+  Destination:          U_CLK/count_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.411ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.018ns (0.295 - 0.313)
+  Source Clock:         clk50m_BUFGP rising at 0.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: U_CLK/count_5 to U_CLK/count_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y30.BQ      Tcko                  0.430   U_CLK/count<7>
+                                                       U_CLK/count_5
+    SLICE_X15Y31.D1      net (fanout=2)        0.930   U_CLK/count<5>
+    SLICE_X15Y31.D       Tilo                  0.259   U_CLK/clk1k
+                                                       U_CLK/GND_2_o_GND_2_o_equal_1_o<15>2
+    SLICE_X13Y31.D2      net (fanout=17)       1.419   U_CLK/GND_2_o_GND_2_o_equal_1_o<15>1
+    SLICE_X13Y31.CLK     Tas                   0.373   U_CLK/count<11>
+                                                       U_CLK/Mcount_count_eqn_111
+                                                       U_CLK/count_11
+    -------------------------------------------------  ---------------------------
+    Total                                      3.411ns (1.062ns logic, 2.349ns route)
+                                                       (31.1% logic, 68.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.714ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_CLK/count_1 (FF)
+  Destination:          U_CLK/count_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.234ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.017ns (0.295 - 0.312)
+  Source Clock:         clk50m_BUFGP rising at 0.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: U_CLK/count_1 to U_CLK/count_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y29.BQ      Tcko                  0.430   U_CLK/count<3>
+                                                       U_CLK/count_1
+    SLICE_X15Y31.D2      net (fanout=2)        0.753   U_CLK/count<1>
+    SLICE_X15Y31.D       Tilo                  0.259   U_CLK/clk1k
+                                                       U_CLK/GND_2_o_GND_2_o_equal_1_o<15>2
+    SLICE_X13Y31.D2      net (fanout=17)       1.419   U_CLK/GND_2_o_GND_2_o_equal_1_o<15>1
+    SLICE_X13Y31.CLK     Tas                   0.373   U_CLK/count<11>
+                                                       U_CLK/Mcount_count_eqn_111
+                                                       U_CLK/count_11
+    -------------------------------------------------  ---------------------------
+    Total                                      3.234ns (1.062ns logic, 2.172ns route)
+                                                       (32.8% logic, 67.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.851ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_CLK/count_0 (FF)
+  Destination:          U_CLK/count_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.097ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.017ns (0.295 - 0.312)
+  Source Clock:         clk50m_BUFGP rising at 0.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: U_CLK/count_0 to U_CLK/count_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y29.AQ      Tcko                  0.430   U_CLK/count<3>
+                                                       U_CLK/count_0
+    SLICE_X15Y31.D3      net (fanout=2)        0.616   U_CLK/count<0>
+    SLICE_X15Y31.D       Tilo                  0.259   U_CLK/clk1k
+                                                       U_CLK/GND_2_o_GND_2_o_equal_1_o<15>2
+    SLICE_X13Y31.D2      net (fanout=17)       1.419   U_CLK/GND_2_o_GND_2_o_equal_1_o<15>1
+    SLICE_X13Y31.CLK     Tas                   0.373   U_CLK/count<11>
+                                                       U_CLK/Mcount_count_eqn_111
+                                                       U_CLK/count_11
+    -------------------------------------------------  ---------------------------
+    Total                                      3.097ns (1.062ns logic, 2.035ns route)
+                                                       (34.3% logic, 65.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point U_CLK/count_15 (SLICE_X15Y31.A2), 16 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     16.566ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_CLK/count_1 (FF)
+  Destination:          U_CLK/count_15 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.390ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.009ns (0.196 - 0.205)
+  Source Clock:         clk50m_BUFGP rising at 0.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: U_CLK/count_1 to U_CLK/count_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y29.BQ      Tcko                  0.430   U_CLK/count<3>
+                                                       U_CLK/count_1
+    SLICE_X14Y29.B1      net (fanout=2)        0.739   U_CLK/count<1>
+    SLICE_X14Y29.COUT    Topcyb                0.448   U_CLK/Mcount_count_cy<3>
+                                                       U_CLK/count<1>_rt
+                                                       U_CLK/Mcount_count_cy<3>
+    SLICE_X14Y30.CIN     net (fanout=1)        0.003   U_CLK/Mcount_count_cy<3>
+    SLICE_X14Y30.COUT    Tbyp                  0.091   U_CLK/Mcount_count_cy<7>
+                                                       U_CLK/Mcount_count_cy<7>
+    SLICE_X14Y31.CIN     net (fanout=1)        0.003   U_CLK/Mcount_count_cy<7>
+    SLICE_X14Y31.COUT    Tbyp                  0.091   U_CLK/Mcount_count_cy<11>
+                                                       U_CLK/Mcount_count_cy<11>
+    SLICE_X14Y32.CIN     net (fanout=1)        0.135   U_CLK/Mcount_count_cy<11>
+    SLICE_X14Y32.DMUX    Tcind                 0.289   Result<15>
+                                                       U_CLK/Mcount_count_xor<15>
+    SLICE_X15Y31.A2      net (fanout=1)        0.788   Result<15>
+    SLICE_X15Y31.CLK     Tas                   0.373   U_CLK/clk1k
+                                                       U_CLK/Mcount_count_eqn_151
+                                                       U_CLK/count_15
+    -------------------------------------------------  ---------------------------
+    Total                                      3.390ns (1.722ns logic, 1.668ns route)
+                                                       (50.8% logic, 49.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.568ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_CLK/count_0 (FF)
+  Destination:          U_CLK/count_15 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.388ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.009ns (0.196 - 0.205)
+  Source Clock:         clk50m_BUFGP rising at 0.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: U_CLK/count_0 to U_CLK/count_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y29.AQ      Tcko                  0.430   U_CLK/count<3>
+                                                       U_CLK/count_0
+    SLICE_X14Y29.A2      net (fanout=2)        0.713   U_CLK/count<0>
+    SLICE_X14Y29.COUT    Topcya                0.472   U_CLK/Mcount_count_cy<3>
+                                                       U_CLK/Mcount_count_lut<0>_INV_0
+                                                       U_CLK/Mcount_count_cy<3>
+    SLICE_X14Y30.CIN     net (fanout=1)        0.003   U_CLK/Mcount_count_cy<3>
+    SLICE_X14Y30.COUT    Tbyp                  0.091   U_CLK/Mcount_count_cy<7>
+                                                       U_CLK/Mcount_count_cy<7>
+    SLICE_X14Y31.CIN     net (fanout=1)        0.003   U_CLK/Mcount_count_cy<7>
+    SLICE_X14Y31.COUT    Tbyp                  0.091   U_CLK/Mcount_count_cy<11>
+                                                       U_CLK/Mcount_count_cy<11>
+    SLICE_X14Y32.CIN     net (fanout=1)        0.135   U_CLK/Mcount_count_cy<11>
+    SLICE_X14Y32.DMUX    Tcind                 0.289   Result<15>
+                                                       U_CLK/Mcount_count_xor<15>
+    SLICE_X15Y31.A2      net (fanout=1)        0.788   Result<15>
+    SLICE_X15Y31.CLK     Tas                   0.373   U_CLK/clk1k
+                                                       U_CLK/Mcount_count_eqn_151
+                                                       U_CLK/count_15
+    -------------------------------------------------  ---------------------------
+    Total                                      3.388ns (1.746ns logic, 1.642ns route)
+                                                       (51.5% logic, 48.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.654ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_CLK/count_2 (FF)
+  Destination:          U_CLK/count_15 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.302ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.009ns (0.196 - 0.205)
+  Source Clock:         clk50m_BUFGP rising at 0.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: U_CLK/count_2 to U_CLK/count_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y29.CQ      Tcko                  0.430   U_CLK/count<3>
+                                                       U_CLK/count_2
+    SLICE_X14Y29.C1      net (fanout=18)       0.774   U_CLK/count<2>
+    SLICE_X14Y29.COUT    Topcyc                0.325   U_CLK/Mcount_count_cy<3>
+                                                       U_CLK/count<2>_rt
+                                                       U_CLK/Mcount_count_cy<3>
+    SLICE_X14Y30.CIN     net (fanout=1)        0.003   U_CLK/Mcount_count_cy<3>
+    SLICE_X14Y30.COUT    Tbyp                  0.091   U_CLK/Mcount_count_cy<7>
+                                                       U_CLK/Mcount_count_cy<7>
+    SLICE_X14Y31.CIN     net (fanout=1)        0.003   U_CLK/Mcount_count_cy<7>
+    SLICE_X14Y31.COUT    Tbyp                  0.091   U_CLK/Mcount_count_cy<11>
+                                                       U_CLK/Mcount_count_cy<11>
+    SLICE_X14Y32.CIN     net (fanout=1)        0.135   U_CLK/Mcount_count_cy<11>
+    SLICE_X14Y32.DMUX    Tcind                 0.289   Result<15>
+                                                       U_CLK/Mcount_count_xor<15>
+    SLICE_X15Y31.A2      net (fanout=1)        0.788   Result<15>
+    SLICE_X15Y31.CLK     Tas                   0.373   U_CLK/clk1k
+                                                       U_CLK/Mcount_count_eqn_151
+                                                       U_CLK/count_15
+    -------------------------------------------------  ---------------------------
+    Total                                      3.302ns (1.599ns logic, 1.703ns route)
+                                                       (48.4% logic, 51.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point U_CLK/count_8 (SLICE_X13Y31.A4), 6 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     16.766ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_CLK/count_5 (FF)
+  Destination:          U_CLK/count_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.181ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.018ns (0.295 - 0.313)
+  Source Clock:         clk50m_BUFGP rising at 0.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: U_CLK/count_5 to U_CLK/count_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y30.BQ      Tcko                  0.430   U_CLK/count<7>
+                                                       U_CLK/count_5
+    SLICE_X15Y31.D1      net (fanout=2)        0.930   U_CLK/count<5>
+    SLICE_X15Y31.D       Tilo                  0.259   U_CLK/clk1k
+                                                       U_CLK/GND_2_o_GND_2_o_equal_1_o<15>2
+    SLICE_X13Y31.A4      net (fanout=17)       1.189   U_CLK/GND_2_o_GND_2_o_equal_1_o<15>1
+    SLICE_X13Y31.CLK     Tas                   0.373   U_CLK/count<11>
+                                                       U_CLK/Mcount_count_eqn_81
+                                                       U_CLK/count_8
+    -------------------------------------------------  ---------------------------
+    Total                                      3.181ns (1.062ns logic, 2.119ns route)
+                                                       (33.4% logic, 66.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.944ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_CLK/count_1 (FF)
+  Destination:          U_CLK/count_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.004ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.017ns (0.295 - 0.312)
+  Source Clock:         clk50m_BUFGP rising at 0.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: U_CLK/count_1 to U_CLK/count_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y29.BQ      Tcko                  0.430   U_CLK/count<3>
+                                                       U_CLK/count_1
+    SLICE_X15Y31.D2      net (fanout=2)        0.753   U_CLK/count<1>
+    SLICE_X15Y31.D       Tilo                  0.259   U_CLK/clk1k
+                                                       U_CLK/GND_2_o_GND_2_o_equal_1_o<15>2
+    SLICE_X13Y31.A4      net (fanout=17)       1.189   U_CLK/GND_2_o_GND_2_o_equal_1_o<15>1
+    SLICE_X13Y31.CLK     Tas                   0.373   U_CLK/count<11>
+                                                       U_CLK/Mcount_count_eqn_81
+                                                       U_CLK/count_8
+    -------------------------------------------------  ---------------------------
+    Total                                      3.004ns (1.062ns logic, 1.942ns route)
+                                                       (35.4% logic, 64.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     17.081ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               U_CLK/count_0 (FF)
+  Destination:          U_CLK/count_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      2.867ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.017ns (0.295 - 0.312)
+  Source Clock:         clk50m_BUFGP rising at 0.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: U_CLK/count_0 to U_CLK/count_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y29.AQ      Tcko                  0.430   U_CLK/count<3>
+                                                       U_CLK/count_0
+    SLICE_X15Y31.D3      net (fanout=2)        0.616   U_CLK/count<0>
+    SLICE_X15Y31.D       Tilo                  0.259   U_CLK/clk1k
+                                                       U_CLK/GND_2_o_GND_2_o_equal_1_o<15>2
+    SLICE_X13Y31.A4      net (fanout=17)       1.189   U_CLK/GND_2_o_GND_2_o_equal_1_o<15>1
+    SLICE_X13Y31.CLK     Tas                   0.373   U_CLK/count<11>
+                                                       U_CLK/Mcount_count_eqn_81
+                                                       U_CLK/count_8
+    -------------------------------------------------  ---------------------------
+    Total                                      2.867ns (1.062ns logic, 1.805ns route)
+                                                       (37.0% logic, 63.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point U_CLK/count_2 (SLICE_X15Y29.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.500ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               U_CLK/count_2 (FF)
+  Destination:          U_CLK/count_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.500ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk50m_BUFGP rising at 20.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: U_CLK/count_2 to U_CLK/count_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y29.CQ      Tcko                  0.198   U_CLK/count<3>
+                                                       U_CLK/count_2
+    SLICE_X15Y29.C5      net (fanout=18)       0.087   U_CLK/count<2>
+    SLICE_X15Y29.CLK     Tah         (-Th)    -0.215   U_CLK/count<3>
+                                                       U_CLK/Mcount_count_eqn_21
+                                                       U_CLK/count_2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.500ns (0.413ns logic, 0.087ns route)
+                                                       (82.6% logic, 17.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point U_CLK/count_0 (SLICE_X15Y29.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.577ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               U_CLK/count_2 (FF)
+  Destination:          U_CLK/count_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.577ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk50m_BUFGP rising at 20.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: U_CLK/count_2 to U_CLK/count_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y29.CQ      Tcko                  0.198   U_CLK/count<3>
+                                                       U_CLK/count_2
+    SLICE_X15Y29.A6      net (fanout=18)       0.164   U_CLK/count<2>
+    SLICE_X15Y29.CLK     Tah         (-Th)    -0.215   U_CLK/count<3>
+                                                       U_CLK/Mcount_count_eqn_01
+                                                       U_CLK/count_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.577ns (0.413ns logic, 0.164ns route)
+                                                       (71.6% logic, 28.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point U_CLK/count_6 (SLICE_X15Y30.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.610ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               U_CLK/count_3 (FF)
+  Destination:          U_CLK/count_6 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.613ns (Levels of Logic = 1)
+  Clock Path Skew:      0.003ns (0.043 - 0.040)
+  Source Clock:         clk50m_BUFGP rising at 20.000ns
+  Destination Clock:    clk50m_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: U_CLK/count_3 to U_CLK/count_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y29.DQ      Tcko                  0.198   U_CLK/count<3>
+                                                       U_CLK/count_3
+    SLICE_X15Y30.C5      net (fanout=18)       0.200   U_CLK/count<3>
+    SLICE_X15Y30.CLK     Tah         (-Th)    -0.215   U_CLK/count<7>
+                                                       U_CLK/Mcount_count_eqn_61
+                                                       U_CLK/count_6
+    -------------------------------------------------  ---------------------------
+    Total                                      0.613ns (0.413ns logic, 0.200ns route)
+                                                       (67.4% logic, 32.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 17.334ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: clk50m_BUFGP/BUFG/I0
+  Logical resource: clk50m_BUFGP/BUFG/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: clk50m_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 19.530ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.470ns (2127.660MHz) (Tcp)
+  Physical resource: U_CLK/count<11>/CLK
+  Logical resource: U_CLK/count_8/CK
+  Location pin: SLICE_X13Y31.CLK
+  Clock network: clk50m_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.530ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.235ns (Trpw)
+  Physical resource: U_CLK/count<11>/SR
+  Logical resource: U_CLK/count_8/SR
+  Location pin: SLICE_X13Y31.SR
+  Clock network: U_CLK/clr_inv
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk50m
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk50m         |    3.464|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 409 paths, 0 nets, and 141 connections
+
+Design statistics:
+   Minimum period:   3.464ns{1}   (Maximum frequency: 288.684MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Nov 22 01:52:11 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 168 MB
+
+
+
