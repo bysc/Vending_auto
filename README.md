@@ -1,0 +1,2 @@
+# Vending_auto
+基于Verilog和AX309开发板设计的自动贩卖机
